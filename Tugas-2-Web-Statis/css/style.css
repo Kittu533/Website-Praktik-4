@@ -1,0 +1,97 @@
+* {
+  background-color: #f9faff;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+/* navbar */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  font-size: 24px;
+}
+.logo-navbar > a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-navbar{
+    margin-left: 7%;
+}
+.item-navbar{
+    margin-right: 7%;
+    
+}
+.item-navbar > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+.item-navbar > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+/* End Navbar */
+
+/* Home */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teks {
+
+  margin: 128px;
+}
+
+.teks > h2{
+    margin-bottom: 16px;
+    color: #FDC435;
+}
+
+.teks > h1{
+    margin-bottom: 16px;
+    font-size: 56px;
+}
+
+.teks > p{
+    margin-right: 32px;
+    color: #828282;
+}
+.btn-home{
+    gap: 32px;
+}
+.btn-1{
+    margin-top: 16px;
+    border: 1px solid;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    
+}
+.btn-2{
+    border-radius: 6px;
+    border: 1px solid;
+    padding: 6px 16px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.img-home{
+    width: 100%;   
+    margin-right: 52px;
+}
+
+.btn-1:hover{
+    background-color: #FDC435;
+
+}
+.btn-2:hover{
+    background-color: #FDC435;
+}
+/* End Home */
+

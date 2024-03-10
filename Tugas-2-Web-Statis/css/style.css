@@ -3,7 +3,10 @@
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
+
+
 /* navbar */
 
 #header {
@@ -39,37 +42,53 @@
   text-decoration: none;
   color: black;
 }
+.item-navbar ul li a {
+  position: relative; 
+}
+
+.item-navbar ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.5s ease;
+}
+
+.item-navbar ul li a:hover::after,
+.item-navbar ul li a.active::after {
+  width: 100%;
+}
+
 /* End Navbar */
 
 /* Home */
-.content {
+.content-home {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.teks {
+.home-teks {
   margin: 128px;
 }
 
-.teks > h2 {
+.home-teks > h2 {
   margin-bottom: 16px;
   color: #fdc435;
   font-size: 52px;
 }
 
-.teks > h1 {
+.home-teks > h1 {
   margin-bottom: 16px;
   font-size: 56px;
 }
 
-.teks > p {
+.home-teks > p {
   margin-right: 32px;
   color: #828282;
   line-height: 1.5;
-}
-.btn-home {
-  gap: 32px;
 }
 .btn-1 {
   margin-top: 16px;
@@ -77,6 +96,7 @@
   padding: 6px 16px;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #fdc435;
 }
 .btn-2 {
   border-radius: 6px;
@@ -84,6 +104,7 @@
   padding: 6px 16px;
   margin-left: 16px;
   cursor: pointer;
+  background-color: #fdc435;
 }
 
 .img-home {
@@ -92,11 +113,18 @@
 }
 
 .btn-1:hover {
-  background-color: #fdc435;
+  background-color: transparent;
 }
 .btn-2:hover {
-  background-color: #fdc435;
+  background-color: transparent;
 }
+.content-home{
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-50px);
+}
+/* End Effect */
+
 /* End Home */
 
 /* About */
@@ -108,20 +136,35 @@
   align-items: center;
   justify-content: space-between;
 }
+.about-teks{
+  margin: 128px;
+}
+.about-teks > h1{
+  color: #fdc435;
+  font-size: 56px;
+}
+.about-teks > p{
+  margin-top: 32px;
+  line-height: 1.5;
+  color: #828282;
+}
 .img-about {
   width: 100%;
-  margin-right: 100px;
+  margin-right: 52px;
 }
-
-#about > p {
+.about-content {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 12px;
-  margin-top: 16px;
-  color: #828282;
-  line-height: 1.5;
+  align-items: center;
 }
+/* Effect About */
+.about-content{
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-50px);
+}
+/* End Effect About */
+
 /* Skill */
 #skill {
   margin-left: 128px;
@@ -164,10 +207,25 @@
   font-size: 16px;
   padding: 0 16px;
   color: #828282;
+  margin-bottom: 24px;
+  
 }
 .skill-detail-item > img {
   width: 100%;
 }
+/* Effect Skill-Detail-Item */
+.skill-detail-item {
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-50px);
+}
+.animate-left {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+/* End Effect */
+
 /* End Skill */
 /* End About */
 
@@ -175,12 +233,19 @@
 #project {
   margin-left: 128px;
   margin-right: 128px;
+  margin-top: 72px;
+}
+.project {
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-50px);
 }
 .project-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 92px;
+  
 }
 .project-header > div > h1 {
   color: #fdc435;
@@ -191,15 +256,18 @@
   color: #828282;
   line-height: 1.5;
 }
+
 .project-detail {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 128px;
   margin-top: 72px;
-  margin-bottom: 200px;
+  margin-bottom: 128px;
 }
+
 .project-detail-item {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 32px;
 }
 .project-detail-item:hover {
   transform: scale(1.15);
@@ -236,4 +304,96 @@
   text-decoration: none;
   color: black;
 }
+/* CSS Animation Classes */
+.project-detail-item {
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-50px);
+}
+.animate-left {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+
 /* End Project */
+
+/* Contact */
+#contact >h1 {
+  color: #fdc435;
+  font-size: 56px;
+  margin-left: 129px;
+}
+.contact-teks{
+  margin-right: 128px;
+  margin-bottom: 72px;
+  margin-top: 24px;
+}
+.contact-teks p{
+  color: #828282;
+}
+.contact{
+  margin-bottom: 72px;
+}
+.contact{
+  margin-left: 128px;
+}
+
+.contact-detail{
+  margin-right: 128px;
+  padding: 32px 32px;
+  border: 1px solid;
+}
+.contact-detail h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 72px;
+}
+.input-group {
+  display: grid;
+  column-gap: 32px;
+  margin-bottom: 32px;
+}
+.input-group > label {
+  font-weight: 700;
+}
+.input-group > input {
+  border: none;
+  outline: none;
+  margin-top: 12px;
+  border-bottom: 1px solid;
+}
+.input-group input:focus{
+  border-bottom: 1px solid #ffc108;
+}
+
+/* Contact */
+/* Footer */
+#footer{
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 7;
+  top: 0;
+  position: sticky;
+}
+.footer-text{
+  padding: 12px 20px;
+  margin-left: 7%;
+}
+.footer-text>p{
+  font-size: 12px;
+  color: #828282;
+}
+.footer-icon{
+  font-size: 42px;
+  margin-right: 7%;
+}
+.footer-icon >a{
+  color: black;
+}
+/* End Footer */
+
+

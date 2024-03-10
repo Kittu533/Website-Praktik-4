@@ -11,18 +11,21 @@
       href="https://fonts.googleapis.com/css2?family=Bad+Script&family=BioRhyme:wght@300&family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
     <!-- Navbar -->
     <header id="header">
       <div class="logo-navbar">
-        <a href="#"> Ryobi </a>
+        <a href="index.html"> Ryobi </a>
       </div>
+      
       <nav class="item-navbar">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -46,8 +49,8 @@
             environments.
           </p>
           <div class="btn-home">
-            <button class="btn-1">Project</button>
-            <button class="btn-2">Linkedin</button>
+            <button class="btn-1" onclick="toggleDetail(event)">Resume</button>
+            <button class="btn-2" onclick="toggleDetail(event)">Linkedin</button>
           </div>
         </div>
         <div class="img-home">

@@ -6,7 +6,6 @@
   scroll-behavior: smooth;
 }
 
-
 /* navbar */
 
 #header {
@@ -43,11 +42,11 @@
   color: black;
 }
 .item-navbar ul li a {
-  position: relative; 
+  position: relative;
 }
 
 .item-navbar ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -61,7 +60,101 @@
 .item-navbar ul li a.active::after {
   width: 100%;
 }
+@media only screen and (max-width: 980px) {
+  .item-navbar {
+    display: none;
+  }
+  .logo-navbar {
+    margin: auto;
+  }
+  .content-home {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .img-home img {
+    width: 300px;
+    margin-left: 52px;
+    margin-top: 52px;
+  }
+  .home-teks {
+    margin-left: 52px;
+  }
+  .home-teks P {
+    margin-left: 32px;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .img-about img{
+   width: 100%;
+   margin-top: 52px;
+  }
+  article.about-teks{
+    margin: 0;
+    padding: 0;
+  }
+  #skill {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: auto !important;
+  }
+  .skill-header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .skill-header >div> h1{
+    margin-top: 72px;
+  }
+  .skill-detail{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    padding: 20px;
+  }
+  .skill-detail-item:hover {
+    transform: scale(0.9) !important;
+    image-rendering: smooth;
+  }
+  #project {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: auto !important;
+    padding: 12px;
+  }
+  .project-detail{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    padding: 20px;
+  }
+  .contact {
+    margin-left: auto !important;
+    
+  }
+  #contact > h1 {
+    margin-left: 52px !important;
+  }
+  .contact-teks p {
+    background-color: re;
+  }
+  .contact-teks,
+  .input-group {
+    text-align: center; /* Mengatur teks ke tengah */
+  }
 
+  .contact-teks p {
+    margin: 0 auto; /* Mengatur margin horizontal menjadi auto */
+  }
+
+  .input-group {
+    margin: 0 auto; /* Mengatur margin horizontal menjadi auto */
+    max-width: 300px; /* Atur lebar maksimum */
+  }
+}
 /* End Navbar */
 
 /* Home */
@@ -118,8 +211,8 @@
 .btn-2:hover {
   background-color: transparent;
 }
-.content-home{
-  opacity: 0; 
+.content-home {
+  opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-50px);
 }
@@ -136,14 +229,14 @@
   align-items: center;
   justify-content: space-between;
 }
-.about-teks{
+.about-teks {
   margin: 128px;
 }
-.about-teks > h1{
+.about-teks > h1 {
   color: #fdc435;
   font-size: 56px;
 }
-.about-teks > p{
+.about-teks > p {
   margin-top: 32px;
   line-height: 1.5;
   color: #828282;
@@ -158,8 +251,8 @@
   align-items: center;
 }
 /* Effect About */
-.about-content{
-  opacity: 0; 
+.about-content {
+  opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-50px);
 }
@@ -167,9 +260,9 @@
 
 /* Skill */
 #skill {
-  margin-left: 128px;
+   margin-left: 128px;
   margin-right: 128px;
-  margin-bottom: 200px;
+  margin-bottom: 200px; 
 }
 
 .skill-header {
@@ -208,20 +301,19 @@
   padding: 0 16px;
   color: #828282;
   margin-bottom: 24px;
-  
 }
 .skill-detail-item > img {
   width: 100%;
 }
 /* Effect Skill-Detail-Item */
 .skill-detail-item {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-50px);
 }
 .animate-left {
   opacity: 1;
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 /* End Effect */
@@ -236,7 +328,7 @@
   margin-top: 72px;
 }
 .project {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-50px);
 }
@@ -245,7 +337,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 92px;
-  
 }
 .project-header > div > h1 {
   color: #fdc435;
@@ -306,45 +397,44 @@
 }
 /* CSS Animation Classes */
 .project-detail-item {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-50px);
 }
 .animate-left {
   opacity: 1;
-  transform: translateX(0); 
+  transform: translateX(0);
 }
-
 
 /* End Project */
 
 /* Contact */
-#contact >h1 {
+#contact > h1 {
   color: #fdc435;
   font-size: 56px;
   margin-left: 129px;
 }
-.contact-teks{
+.contact-teks {
   margin-right: 128px;
   margin-bottom: 72px;
   margin-top: 24px;
 }
-.contact-teks p{
+.contact-teks p {
   color: #828282;
 }
-.contact{
+.contact {
   margin-bottom: 72px;
 }
-.contact{
+.contact {
   margin-left: 128px;
 }
 
-.contact-detail{
+.contact-detail {
   margin-right: 128px;
   padding: 32px 32px;
   border: 1px solid;
 }
-.contact-detail h1{
+.contact-detail h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,14 +454,14 @@
   margin-top: 12px;
   border-bottom: 1px solid;
 }
-.input-group input:focus{
+.input-group input:focus {
   border-bottom: 1px solid #ffc108;
 }
 
 /* Contact */
 /* Footer */
-#footer{
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);  
+#footer {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -379,21 +469,19 @@
   top: 0;
   position: sticky;
 }
-.footer-text{
+.footer-text {
   padding: 12px 20px;
   margin-left: 7%;
 }
-.footer-text>p{
+.footer-text > p {
   font-size: 12px;
   color: #828282;
 }
-.footer-icon{
+.footer-icon {
   font-size: 42px;
   margin-right: 7%;
 }
-.footer-icon >a{
+.footer-icon > a {
   color: black;
 }
 /* End Footer */
-
-
